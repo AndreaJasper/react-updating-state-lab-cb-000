@@ -1,7 +1,7 @@
 import React from 'react';
-
+ 
 class YouTubeDebugger extends React.Component {
-
+  
   state = {
     errors: [],
     user: null,
@@ -12,7 +12,7 @@ class YouTubeDebugger extends React.Component {
       }
     }
   }
-
+ 
   bitrateClick = () => {
     this.setState({
       settings: {
@@ -33,17 +33,17 @@ class YouTubeDebugger extends React.Component {
       }
     })
   }
-
+ 
   render() {
-    return(
+    return (
       <div>
-      <h3>Bitrate Button</h3>
-      <button className="bitrate" onClick={this.bitrateClick}>{this.state.settings.bitrate}</button>
-      <h3>Resolution Button</h3>
-      <button className="resolution" onClick={this.resolutionClick}>{this.state.settings.video.resolution}</button>
+        <h3>click to change bitrate to 12</h3>
+        <button className='bitrate' onClick={this.bitrateClick}>{this.state.settings.bitrate}</button>
+        <h3>click to change resolution to 720p</h3>
+        <button className='resolution' onClick={this.resolutionClick}>{this.state.settings.video.resolution}</button>
       </div>
-    );
+    )
   }
 }
-
+ 
 export default YouTubeDebugger;
